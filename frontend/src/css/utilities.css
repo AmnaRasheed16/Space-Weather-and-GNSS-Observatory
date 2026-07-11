@@ -1,0 +1,39 @@
+/* Colors Utilities */
+.text-glow {
+    background: linear-gradient(to right, var(--color-primary), #a29bfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.text-glow-green {
+    color: var(--color-success);
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+}
+
+.text-orange { color: var(--color-orange); }
+.text-cyan { color: var(--color-primary); }
+.text-purple { color: var(--color-secondary); }
+.text-red { color: var(--color-danger); }
+.text-gray { color: var(--color-text-muted); }
+
+.bg-cyan { background: rgba(0, 242, 254, 0.1); color: var(--color-primary); }
+.bg-purple { background: rgba(138, 43, 226, 0.1); color: var(--color-secondary); }
+.bg-orange { background: rgba(255, 123, 0, 0.1); color: var(--color-orange); }
+.bg-blue { background: #2563eb; color: #fff; }
+.bg-red { background: #ef4444; color: #fff; }
+.bg-green { background: #10b981; color: #fff; }
+.bg-yellow { background: #eab308; color: #fff; }
+
+.animate-pulse {
+    animation: pulse 1.8s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    100% { opacity: 1; transform: scale(1.02); }
+}
+
+.hidden {
+    display: none !important;
+}

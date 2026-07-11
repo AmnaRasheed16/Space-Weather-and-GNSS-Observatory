@@ -1,0 +1,88 @@
+/* Premium Agency Structured Footer */
+.app-footer {
+    background: #030408;
+    border-top: var(--border-glass);
+    padding: 60px 0 40px;
+    margin-top: 120px;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 80px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.footer-brand p {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    max-width: 420px;
+}
+
+.footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.footer-links-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links-col h4 {
+    font-family: var(--font-header);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-text);
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.footer-links-col h4::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 20px;
+    height: 1.5px;
+    background: var(--color-primary);
+}
+
+.footer-links-col a {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-links-col a:hover {
+    color: var(--color-primary);
+}
+
+.status-indicator-col {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+
+.status-indicator-col .status-dot {
+    width: 6px;
+    height: 6px;
+}

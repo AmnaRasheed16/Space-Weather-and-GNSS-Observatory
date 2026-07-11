@@ -1,0 +1,38 @@
+/* Notification Toaster */
+.toast-notification {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: rgba(17, 20, 36, 0.9);
+    border: 1px solid var(--color-success);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+    border-radius: 8px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    z-index: 10000;
+    animation: slide-in 0.3s ease;
+}
+
+@keyframes slide-in {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.toast-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.toast-title {
+    font-family: var(--font-header);
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.toast-message {
+    font-size: 12px;
+    color: var(--color-text-muted);
+}

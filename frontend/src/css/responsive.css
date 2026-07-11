@@ -1,0 +1,29 @@
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .hero-section, .tech-wrapper, .orbits-grid-wrapper, .upload-split-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .dashboard-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .dashboard-sidebar {
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 12px;
+    }
+    
+    .sidebar-menu {
+        flex-direction: row;
+    }
+    
+    .sidebar-status-footer {
+        display: none;
+    }
+    
+    .grid-3, .resources-grid, .stations-grid, .scales-console-wrapper {
+        grid-template-columns: 1fr;
+    }
+}

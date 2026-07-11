@@ -1,0 +1,68 @@
+/* ==========================================
+   UPGRADED SCIENTIFIC LANDING PAGE STYLES
+   ========================================== */
+.hero-subtitle-scientific {
+    font-family: var(--font-header);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.2);
+}
+
+.hero-description {
+    font-size: 15px;
+    color: var(--color-text-muted);
+    margin-bottom: 32px;
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+/* Partner branding in Hero */
+.partner-branding-footer {
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+    width: 100%;
+}
+
+.partner-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.partner-logo-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.partner-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.02);
+    border: var(--border-glass);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-text);
+    transition: all var(--transition-fast);
+}
+
+.partner-badge i {
+    color: var(--color-primary);
+}
+
+.partner-badge:hover {
+    background: rgba(0, 242, 254, 0.05);
+    border-color: rgba(0, 242, 254, 0.25);
+    transform: translateY(-1px);
+}

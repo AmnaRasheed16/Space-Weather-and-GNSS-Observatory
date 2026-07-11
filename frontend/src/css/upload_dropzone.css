@@ -1,0 +1,41 @@
+/* Ingestion upload dropzone */
+.upload-split-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 20px;
+}
+
+.upload-dropzone {
+    border: 2px dashed rgba(0, 242, 254, 0.2);
+    background: rgba(0, 242, 254, 0.01);
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.upload-dropzone:hover, .upload-dropzone.dragover {
+    border-color: var(--color-primary);
+    background: rgba(0, 242, 254, 0.04);
+}
+
+.cloud-icon {
+    font-size: 40px;
+    color: var(--color-primary-glow);
+}
+
+.upload-dropzone h5 {
+    font-family: var(--font-header);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.upload-dropzone p {
+    font-size: 11px;
+    color: var(--color-text-muted);
+}

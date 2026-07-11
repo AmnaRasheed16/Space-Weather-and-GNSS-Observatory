@@ -1,0 +1,84 @@
+.radar-legend {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+    font-size: 11px;
+}
+
+.legend-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.legend-dot.gps { background-color: #2563eb; }
+.legend-dot.glonass { background-color: #ef4444; }
+.legend-dot.galileo { background-color: #10b981; }
+.legend-dot.beidou { background-color: #eab308; }
+
+.widget-constellation-stats h4 {
+    font-family: var(--font-header);
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: 16px;
+}
+
+.signal-chart-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.snr-bar-row {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    align-items: center;
+    gap: 12px;
+}
+
+.snr-label {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.snr-progress-bg {
+    background: rgba(255, 255, 255, 0.03);
+    height: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: var(--border-glass);
+}
+
+.snr-progress-bar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.satellite-list-scrollable {
+    max-height: 140px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 10px;
+}
+
+.sat-list-item {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: rgba(255, 255, 255, 0.01);
+    border: var(--border-glass);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-family: var(--font-mono);
+}

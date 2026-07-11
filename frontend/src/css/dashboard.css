@@ -1,0 +1,84 @@
+/* ==========================================
+   3. PRIVATE COCKPIT DASHBOARD
+   ========================================== */
+.dashboard-wrapper {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    min-height: calc(100vh - 73px);
+}
+
+.dashboard-sidebar {
+    background: #080a13;
+    border-right: var(--border-glass);
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar-item {
+    background: transparent;
+    border: none;
+    color: var(--color-text-muted);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-family: var(--font-header);
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: left;
+    transition: all var(--transition-fast);
+}
+
+.sidebar-item:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.sidebar-item.active {
+    color: var(--color-primary);
+    background: rgba(0, 242, 254, 0.05);
+    border-left: 2px solid var(--color-primary);
+    border-radius: 0 8px 8px 0;
+    padding-left: 14px;
+}
+
+.sidebar-status-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+}
+
+.db-conn-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.db-conn-status .status-dot {
+    width: 6px;
+    height: 6px;
+}
+
+.db-conn-status .status-text {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--color-text-muted);
+}
+
+.dashboard-main-content {
+    background: #05070e;
+    padding: 30px;
+    overflow-y: auto;
+}

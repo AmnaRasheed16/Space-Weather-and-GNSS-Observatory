@@ -1,0 +1,51 @@
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-orb {
+    position: relative;
+    width: 32px;
+    height: 32px;
+}
+
+.logo-sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--color-primary);
+}
+
+.logo-orbit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 242, 254, 0.4);
+    border-radius: 50%;
+    border-right-color: transparent;
+    animation: orbit-rotate 4s linear infinite;
+}
+
+@keyframes orbit-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.logo-text {
+    font-family: var(--font-header);
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.logo-accent {
+    color: var(--color-primary);
+}

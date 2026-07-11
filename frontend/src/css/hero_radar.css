@@ -1,0 +1,88 @@
+/* GNSS Radar visual in Hero */
+.hero-radar-visual {
+    position: relative;
+    padding: 30px;
+    border-left: 2px solid var(--color-primary);
+    overflow: hidden;
+}
+
+.radar-visual-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-indicator h4 {
+    font-family: var(--font-header);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--color-text);
+}
+
+.pulse-indicator {
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--color-primary);
+    animation: radar-pulse 1.5s infinite;
+}
+
+@keyframes radar-pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.4; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.public-radar-container {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    background: #030408;
+    border-radius: 50%;
+    border: var(--border-glass);
+    padding: 8px;
+    box-shadow: inset 0 0 20px rgba(0, 242, 254, 0.08);
+}
+
+.radar-sweep-line {
+    stroke: var(--color-primary);
+    stroke-width: 1.5px;
+    stroke-linecap: round;
+    opacity: 0.45;
+    animation: radar-sweep 8s linear infinite;
+}
+
+@keyframes radar-sweep {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.radar-constellation-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.legend-badge {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.legend-badge.gps { background: rgba(37, 99, 235, 0.15); color: #60a5fa; border: 1px solid rgba(37, 99, 235, 0.3); }
+.legend-badge.glonass { background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); }
+.legend-badge.galileo { background: rgba(16, 181, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 181, 129, 0.3); }
+.legend-badge.beidou { background: rgba(234, 179, 8, 0.15); color: #facc15; border: 1px solid rgba(234, 179, 8, 0.3); }

@@ -1,0 +1,58 @@
+/* GNSS Station Directory styles */
+.stations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.station-card {
+    border-left: 3px solid var(--color-success);
+}
+
+.station-card.inactive {
+    border-left-color: var(--color-danger);
+}
+
+.station-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.station-card-header h3 {
+    font-family: var(--font-header);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.station-card-header .st-id {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    background: var(--bg-light);
+    color: var(--color-primary);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.station-details-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    font-size: 12px;
+}
+
+.st-detail-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.st-detail-item .lbl {
+    color: var(--color-text-muted);
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.st-detail-item .val {
+    font-weight: 500;
+}

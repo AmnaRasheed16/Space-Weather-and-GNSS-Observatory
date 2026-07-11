@@ -1,0 +1,76 @@
+/* Interactive NOAA Scales Console */
+.scales-console-section {
+    max-width: 1400px;
+    margin: 100px auto;
+    padding: 0 24px;
+}
+
+.scales-console-wrapper {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+    padding: 40px;
+    background: rgba(10, 12, 22, 0.6);
+}
+
+.console-tabs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    padding-right: 20px;
+}
+
+.console-tab {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 8px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    text-align: left;
+    transition: all var(--transition-fast);
+}
+
+.console-tab:hover {
+    background: rgba(255, 255, 255, 0.02);
+    color: #fff;
+}
+
+.console-tab.active {
+    background: rgba(0, 242, 254, 0.04);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.05);
+}
+
+.tab-label-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-prefix {
+    font-family: var(--font-header);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.tab-title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.tab-icon {
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.console-details-board {
+    min-height: 280px;
+}

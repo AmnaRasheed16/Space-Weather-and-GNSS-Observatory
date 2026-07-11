@@ -1,0 +1,30 @@
+/* ==========================================
+   AETHERSHIELD CORE CSS VARIABLES
+   ========================================== */
+:root {
+    --bg-darker: #060810;
+    --bg-dark: #0a0c16;
+    --bg-medium: #111424;
+    --bg-light: #1b1e34;
+    --color-text: #e2e8f0;
+    --color-text-muted: #94a3b8;
+    
+    --color-primary: #00f2fe; /* Electric Cyan */
+    --color-primary-glow: rgba(0, 242, 254, 0.4);
+    --color-secondary: #8a2be2; /* Neon Violet */
+    --color-secondary-glow: rgba(138, 43, 226, 0.4);
+    
+    --color-success: #10b981; /* Green */
+    --color-warning: #ffb800; /* Yellow */
+    --color-danger: #ef4444; /* Red */
+    --color-orange: #ff7b00; /* Alert Orange */
+    
+    --font-header: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'Fira Code', monospace;
+    
+    --transition-fast: 0.15s ease;
+    --transition-norm: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --border-radius: 12px;
+    --border-glass: 1px solid rgba(255, 255, 255, 0.05);
+}

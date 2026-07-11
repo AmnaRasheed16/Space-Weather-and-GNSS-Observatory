@@ -1,0 +1,64 @@
+/* Alerts Banner */
+.alerts-ticker-bar {
+    display: flex;
+    background: rgba(255, 123, 0, 0.08);
+    border: 1px solid rgba(255, 123, 0, 0.2);
+    border-radius: 6px;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.ticker-label {
+    background: var(--color-orange);
+    color: #000;
+    padding: 8px 16px;
+    font-family: var(--font-header);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ticker-content {
+    padding: 8px 20px;
+    font-size: 12px;
+    color: var(--color-orange);
+    font-weight: 500;
+    align-self: center;
+}
+
+.panel-header {
+    margin-bottom: 30px;
+}
+
+.panel-header h2, .panel-header-with-action h2 {
+    font-family: var(--font-header);
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.panel-header p, .panel-header-with-action p {
+    color: var(--color-text-muted);
+    font-size: 14px;
+}
+
+.panel-header-with-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Dashboard Panels Layout */
+.dashboard-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-grid-row {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 20px;
+}

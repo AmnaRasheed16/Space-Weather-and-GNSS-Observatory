@@ -1,0 +1,55 @@
+/* Kp index gauge */
+.widget-kp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.widget-kp h4 {
+    font-family: var(--font-header);
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: 20px;
+    align-self: flex-start;
+}
+
+.kp-gauge-container {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    margin: 10px 0 20px;
+    overflow: hidden;
+}
+
+.kp-gauge-radial {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(
+        from 270deg,
+        var(--color-success) 0deg,
+        var(--color-success) 60deg,
+        var(--color-warning) 60deg,
+        var(--color-warning) 120deg,
+        var(--color-orange) 120deg,
+        var(--color-orange) 150deg,
+        var(--color-danger) 150deg,
+        var(--color-danger) 180deg,
+        transparent 180deg
+    );
+    border-bottom: 40px solid var(--bg-medium);
+}
+
+.kp-gauge-radial::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 150px;
+    height: 150px;
+    background: #0a0c16;
+    border-radius: 50%;
+}

@@ -1,0 +1,71 @@
+/* Sky plot / Satellite Orbits Panel */
+.orbits-grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.widget-sky-radar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.widget-sky-radar h4 {
+    font-family: var(--font-header);
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: 20px;
+    align-self: flex-start;
+}
+
+.sky-radar-container {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1;
+    background: #04050a;
+    border-radius: 50%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: inset 0 0 20px rgba(0, 242, 254, 0.08);
+}
+
+.radar-grid-line {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.05);
+    stroke-width: 1px;
+}
+
+.radar-grid-center {
+    fill: var(--color-primary);
+}
+
+.radar-label {
+    fill: var(--color-text-muted);
+    font-family: var(--font-header);
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.radar-marker-label {
+    fill: rgba(255, 255, 255, 0.15);
+    font-family: var(--font-mono);
+    font-size: 8px;
+}
+
+.sat-dot {
+    cursor: pointer;
+    transition: r 0.2s ease, filter 0.2s ease;
+}
+
+.sat-dot:hover {
+    r: 6px;
+}
+
+.sat-label {
+    font-family: var(--font-mono);
+    font-size: 8px;
+    font-weight: 700;
+    fill: #fff;
+}

@@ -1,0 +1,48 @@
+/* Code Terminal visual */
+.tech-visual {
+    padding: 0;
+    overflow: hidden;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.visual-header {
+    background: #0d0f1b;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.window-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.window-dot.red { background-color: var(--color-danger); }
+.window-dot.yellow { background-color: var(--color-warning); }
+.window-dot.green { background-color: var(--color-success); }
+
+.window-title {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--color-text-muted);
+    margin-left: 8px;
+}
+
+.code-terminal {
+    background: #05060b;
+    padding: 20px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1.7;
+    height: 280px;
+    overflow-y: auto;
+}
+
+.c-blue { color: var(--color-primary); }
+.c-line { display: block; }
+.c-line.green { color: var(--color-success); }
+.c-line.cyan { color: var(--color-primary); }
+.c-line.purple { color: #d687ff; }

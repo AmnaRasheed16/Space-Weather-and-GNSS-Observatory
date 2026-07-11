@@ -1,0 +1,82 @@
+.widget-solar-wind h4 {
+    font-family: var(--font-header);
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: 20px;
+}
+
+.telemetry-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.tel-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: var(--border-glass);
+    border-radius: 8px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tel-name {
+    font-size: 12px;
+    color: var(--color-text-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tel-val {
+    font-family: var(--font-header);
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+.mt-20 { margin-top: 20px; }
+.full-width-card {
+    width: 100%;
+}
+
+/* Station filtration */
+.station-filter-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.station-filter-container label {
+    font-size: 12px;
+    color: var(--color-text-muted);
+}
+
+.form-control-sm {
+    background: var(--bg-light);
+    border: var(--border-glass);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.tec-explanation-box {
+    background: rgba(0, 242, 254, 0.03);
+    border: 1px solid rgba(0, 242, 254, 0.1);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.tec-explanation-box h5 {
+    font-family: var(--font-header);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.tec-explanation-box p {
+    font-size: 12px;
+    color: var(--color-text-muted);
+}

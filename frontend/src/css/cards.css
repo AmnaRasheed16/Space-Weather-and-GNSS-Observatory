@@ -1,0 +1,16 @@
+/* Glassmorphic Card base */
+.glass-card {
+    background: rgba(17, 20, 36, 0.45);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: var(--border-glass);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    transition: border-color var(--transition-norm), box-shadow var(--transition-norm), transform var(--transition-fast);
+}
+
+.glass-card:hover {
+    border-color: rgba(0, 242, 254, 0.15);
+    box-shadow: 0 8px 36px 0 rgba(0, 242, 254, 0.05);
+}
