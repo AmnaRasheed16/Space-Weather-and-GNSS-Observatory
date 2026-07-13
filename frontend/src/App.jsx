@@ -37,6 +37,7 @@ export default function App() {
 
   useEffect(() => {
     if (token) {
+      setView("dashboard");
       fetchTelemetry();
       const interval = setInterval(fetchTelemetry, 10000);
       return () => clearInterval(interval);
