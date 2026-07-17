@@ -1,10 +1,18 @@
 import os
 import logging
+from contextlib import asynccontextmanager
 from datetime import datetime
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, HTMLResponse
 from fastapi.staticfiles import StaticFiles
+import sys
+from pathlib import Path
+
+# Fix 'ModuleNotFoundError: No module named backend' when running directly
+project_root = str(Path(__file__).parent.parent)
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
 
 from backend.database import get_database
 from backend.seed_data import seed_database
@@ -80,4 +88,20 @@ async def get_favicon():
         return FileResponse(fav)
     return HTMLResponse(status_code=404)
 
-app.mount("/assets", StaticFiles(directory=os.path.join(frontend_path, "dist", "assets")), name="assets")
+
+# Only mount static assets directory if it actually exists (avoids startup crash)
+assets_dir = os.path.join(frontend_path, "dist", "assets")
+if os.path.isdir(assets_dir):
+    app.mount("/assets", StaticFiles(directory=assets_dir), name="assets")
+
+if __name__ == "__main__":
+    # Suppress all logs when running directly via python main.py (inherits to reloader process)
+    os.environ["SUPPRESS_LOGS"] = "1"
+    # Also suppress for the parent process just in case
+    logging.getLogger("AetherShield").setLevel(logging.CRITICAL)
+    logging.getLogger("AetherShield.Database").setLevel(logging.CRITICAL)
+    logging.getLogger("AetherShield.Seed").setLevel(logging.CRITICAL)
+    
+    import uvicorn
+    uvicorn.run("backend.main:app", host="127.0.0.1", port=8000, reload=True)
+
