@@ -71,8 +71,8 @@ async def seed_data():
     await seed_database(db, is_mongo)
     return {"message": "Database seeded successfully with test records."}
 
-frontend_path = os.path.abspath("frontend")
-os.makedirs(frontend_path, exist_ok=True)
+BASE_DIR = Path(__file__).resolve().parent.parent
+frontend_path = os.path.join(BASE_DIR, "frontend")
 
 @app.get("/")
 async def read_index():
